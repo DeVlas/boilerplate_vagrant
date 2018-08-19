@@ -32,6 +32,9 @@ sed -i 's/^;date.timezone.*=.*$/date.timezone = UTC/' /etc/php.ini
 sed -i 's/^;upload_max_filesize.*=.*$/upload_max_filesiza=20M/' /etc/php.ini
 sed -i 's/^;post_max_size.*=.*/post_max_size=20M/' /etc/php.ini
 
+#disabled selinux for nginx, reload need
+sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+
 #POSTGRESQL configuration
 sed -i "^#listen_addresses.*=.*$/listen_addresses.*= '*'/" /var/lib/pgsql/9.6/data/postgresql.conf
 

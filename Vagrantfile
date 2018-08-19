@@ -2,21 +2,21 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-      config.vm.box = "centos/7"
-      config.vm.synced_folder ".", "/home/vagrant/htdocs" , mount_options: %w(dmode=775 fmode=664)
-
-      [5432, 3000, 3001].each do |port|
-            config.vm.network "forwarded_port", guest: port, host: port
-      end
+    config.vm.box = "centos/7"
 
     config.hostmanager.enabled = true
     config.hostmanager.manage_host = true
-    config.hostmanager.manage_guest = true
+    #config.hostmanager.manage_guest = true
+    [5433, 3000].each do |port|
+        config.vm.network "forwarded_port", guest: port, host: port
+    end
 
     config.vm.define 'drug.vm' do |node|
         node.vm.hostname = 'drug.vm'
         node.hostmanager.aliases = %w(io.drug.vm admin.drug.vm api.drug.vm)
-     end
+    end
+
+    config.vm.synced_folder ".", "/home/vagrant/htdocs", mount_options: ["dmode=775", "fmode=664"]
 
    #config.vm.provision "shell", name: 'environment.sh', path: './vagrant/environment/environment.sh'
    #config.vm.provision "shell", name: 'application.sh', path: './vagrant/environment/application.sh'
