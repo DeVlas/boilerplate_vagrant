@@ -1,0 +1,42 @@
+{
+  "root": true,
+  "extends": [
+    "standard",
+    "plugin:vue/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module",
+    "env": {
+      "node": true
+    }
+  },
+  "plugins": [
+    "vue"
+  ],
+  "rules": {
+    "vue/script-indent": [
+      "error",
+      4,
+      {"baseIndent": 1}
+    ],
+    "vue/html-indent": ["error", 4, {
+      "attribute": 1,
+      "closeBracket": 0,
+      "alignAttributesVertically": true,
+      "ignores": []
+    }],
+    "vue/name-property-casing": [
+      "error", "kebab-case"
+    ],
+    "indent": ["error", 4]
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "rules": {
+        "indent": "off"
+      }
+    }
+  ]
+}
