@@ -9,11 +9,11 @@ $font-path: '../fonts' !default;
         font-weight: $weight;
         src: url('#{$path}-#{$type}.eot');
         src: local('#{$font} #{$type}'),
-        url('#{$path}-#{$type}.eot?#iefix'),
-        url('#{$path}-#{$type}.woff2') format('woff2'),
-        url('#{$path}-#{$type}.woff') format('woff'),
-        url('#{$path}-#{$type}.ttf') format('truetype'),
-        url('#{$path}-#{$type}.svg##{$font}') format('svg'),
+            url('#{$path}-#{$type}.eot?#iefix'),
+            url('#{$path}-#{$type}.woff2') format('woff2'),
+            url('#{$path}-#{$type}.woff') format('woff'),
+            url('#{$path}-#{$type}.ttf') format('truetype'),
+            url('#{$path}-#{$type}.svg##{$font}') format('svg'),
 
     }
 
@@ -21,11 +21,11 @@ $font-path: '../fonts' !default;
         font-family: '#{$font}-#{$type}';
         src: url('#{$path}-#{$type}.eot');
         src: local('#{$font} #{$type}'),
-        local('#{$font}-#{$type}'),
-        url('#{$path}-#{$type}.eot?#iefix') format('embedded-opentype'),
-        url('#{$path}-#{$type}.woff2') format('woff2'),
-        url('#{$path}-#{$type}.woff') format('woff'),
-        url('#{$path}-#{$type}.ttf') format('truetype'),
-        url('#{$path}-#{$type}.svg##{$font}') format('svg');
+            local('#{$font}-#{$type}'),
+            url('#{$path}-#{$type}.eot?#iefix') format('embedded-opentype'),
+            url('#{$path}-#{$type}.woff2') format('woff2'),
+            url('#{$path}-#{$type}.woff') format('woff'),
+            url('#{$path}-#{$type}.ttf') format('truetype'),
+            url('#{$path}-#{$type}.svg##{$font}') format('svg');
     }
 }

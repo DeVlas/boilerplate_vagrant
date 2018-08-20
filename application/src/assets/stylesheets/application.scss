@@ -5,11 +5,11 @@ html {
 }
 
 body {
-    font-family: Roboto, sans-serif;
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     height: 100%;
+    font-family: Roboto, sans-serif;
     .application {
         flex: 1;
     }

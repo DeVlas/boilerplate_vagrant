@@ -15,12 +15,12 @@
 </script>
 <style lang="scss" scoped>
     .application-loading {
-        background: rgba(180, 180, 180, 0.65);
-        flex: 1;
         display: flex;
+        flex: 1;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         height: 100%;
+        background: rgba(180, 180, 180, 0.65);
     }
 </style>

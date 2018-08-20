@@ -4,17 +4,11 @@
     </div>
 </template>
 <script>
-    import TopMenu from 'components/top-menu'
-    import Footer from 'components/footer'
     import { mapActions } from 'vuex'
     import PostModel from 'models/post'
 
     export default {
         name: 'layout',
-        components: {
-            TopMenu,
-            Footer
-        },
         methods: {
             ...mapActions('UserModule', {
                 loadUser: 'loadUser'
@@ -32,7 +26,7 @@
 </script>
 <style lang="scss" scoped>
     .lol {
-        border: 1px solid;
         background: blue;
+        border: 1px solid;
     }
 </style>

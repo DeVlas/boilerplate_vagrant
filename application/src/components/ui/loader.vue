@@ -8,16 +8,16 @@
 </script>
 <style scoped lang="scss">
     .lds-ripple {
-        display: inline-block;
         position: relative;
+        display: inline-block;
         width: 128px;
         height: 128px;
     }
     .lds-ripple div {
         position: absolute;
         border: 4px solid #fff;
-        opacity: 1;
         border-radius: 50%;
+        opacity: 1;
         animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
     }
     .lds-ripple div:nth-child(2) {

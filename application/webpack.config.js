@@ -29,6 +29,7 @@ module.exports = {
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
+                    extractCSS: true,
                     loaders: {
                         i18n: '@kazupon/vue-i18n-loader'
                     }
@@ -39,9 +40,6 @@ module.exports = {
                 use: [
                     {
                         loader: this.mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader'
-                    },
-                    {
-                        loader: 'vue-style-loader'
                     },
                     {
                         loader: 'css-loader'
