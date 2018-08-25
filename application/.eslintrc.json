@@ -5,12 +5,12 @@
     "plugin:vue/recommended"
   ],
   "parserOptions": {
-    "ecmaVersion": 9,
-    "sourceType": "module",
-    "env": {
-      "node": true
-    }
-  },
+  "ecmaVersion": 9,
+  "sourceType": "module",
+  "env": {
+    "node": true
+  }
+},
   "plugins": [
     "vue"
   ],
@@ -29,7 +29,9 @@
     "vue/name-property-casing": [
       "error", "kebab-case"
     ],
-    "indent": ["error", 4]
+    "indent": ["error", 4],
+    "no-extra-semi": "error",
+    "semi": ["error", "always", { "omitLastInOneLineBlock": true }]
   },
   "overrides": [
     {
