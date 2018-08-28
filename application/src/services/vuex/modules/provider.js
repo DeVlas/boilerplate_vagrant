@@ -5,12 +5,12 @@ export default {
     },
     getters: {
         user (state) {
-            return state.user
+            return state.user;
         }
     },
     mutations: {
         setUser (state, user) {
-            state.user = user
+            state.user = user;
         }
     },
     actions: {
@@ -19,10 +19,10 @@ export default {
                 name: 'Pisya',
                 last_name: 'Kamushin',
                 age: 11
-            }
+            };
             setTimeout(() => {
-                state.commit('setUser', user)
-            }, 1000)
+                state.commit('setUser', user);
+            }, 1000);
         }
     }
-}
+};

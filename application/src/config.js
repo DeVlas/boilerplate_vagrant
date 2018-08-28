@@ -3,4 +3,4 @@ export default {
         api: 'http://jsonplaceholder.typicode.com'
     },
     localStoragePrefix: 'drug'
-}
+};

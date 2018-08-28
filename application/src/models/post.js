@@ -1,10 +1,10 @@
-import Api from 'services/Api'
+import Api from 'services/Api';
 
 export default {
     items () {
-        return Api.get('/posts')
+        return Api.get('/posts');
     },
     item (id) {
-        return Api.get(`/posts/${id}`)
+        return Api.get(`/posts/${id}`);
     }
-}
+};

@@ -1,12 +1,12 @@
-const path = require('path')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const NewHtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const webpack = require('webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const DashboardPlugin = require('webpack-dashboard/plugin')
-const StyleLintPlugin = require('stylelint-webpack-plugin')
+const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const NewHtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
     mode: process.env.NODE_ENV || 'development',
@@ -88,7 +88,7 @@ module.exports = {
                 test: /\.js$/,
                 exclude: file => (
                     /node_modules/.test(file) &&
-                  !/\.vue\.js/.test(file)
+                    !/\.vue\.js/.test(file)
                 ),
                 include: path.join(__dirname, '/src'),
                 use: {
@@ -158,4 +158,4 @@ module.exports = {
             errors: true
         }
     }
-}
+};

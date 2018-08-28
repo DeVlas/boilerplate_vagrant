@@ -5,7 +5,7 @@ let lazyMessages = {
     ru: {
         hello_world: 'Привет мир!'
     }
-}
+};
 
 export default {
     namespaced: true,
@@ -15,27 +15,27 @@ export default {
     },
     getters: {
         messages (state) {
-            return state.messages
+            return state.messages;
         },
         language (state) {
-            return state.language
+            return state.language;
         }
     },
     mutations: {
         setMessages (state, messages) {
-            state.messages = messages
+            state.messages = messages;
         },
         setLanguage (state, language) {
-            state.language = language
+            state.language = language;
         }
     },
     actions: {
         getMessages (state) {
-            console.log('store i18n action get message')
+            console.log('store i18n action get message');
             setTimeout(() => {
-                state.messages = lazyMessages
-            }, 2000)
+                state.messages = lazyMessages;
+            }, 2000);
         }
     }
 
-}
+};

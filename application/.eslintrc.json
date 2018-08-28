@@ -29,8 +29,24 @@
     "vue/name-property-casing": [
       "error", "kebab-case"
     ],
+    "vue/max-attributes-per-line": [2, {
+      "singleline": 5,
+      "multiline": {
+        "max": 1,
+        "allowFirstLine": true
+      }
+    }],
+    "vue/html-self-closing": ["error", {
+      "html": {
+        "void": "never",
+        "normal": "always",
+        "component": "always"
+      },
+      "svg": "always",
+      "math": "always"
+    }],
+    "no-trailing-spaces": ["error", { "skipBlankLines": true }],
     "indent": ["error", 4],
-    "no-extra-semi": "error",
     "semi": ["error", "always", { "omitLastInOneLineBlock": true }]
   },
   "overrides": [

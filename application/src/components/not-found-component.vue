@@ -5,5 +5,5 @@
 <script>
     export default {
         name: 'not-found-component'
-    }
+    };
 </script>

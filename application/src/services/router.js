@@ -1,16 +1,16 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Layout from 'components/layout'
-import FoodList from 'components/food-list/index'
-import NotFoundComponent from 'components/not-found-component'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Layout from 'components/layouts/layout';
+import FoodList from 'components/food-list/index';
+import NotFoundComponent from 'components/not-found-component';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const router = new VueRouter({
     mode: 'history',
     routes: [
         {
-            path: '/',
+            path: '',
             name: 'main',
             component: Layout,
             children: [
@@ -24,11 +24,11 @@ const router = new VueRouter({
         { path: '*', component: NotFoundComponent }
 
     ]
-})
+});
 
 router.beforeEach((to, from, next) => {
-    console.info('before each')
-    next()
-})
+    console.info('before each');
+    next();
+});
 
-export default router
+export default router;

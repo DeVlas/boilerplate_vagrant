@@ -4,14 +4,14 @@
     </div>
 </template>
 <script>
-    import Loader from 'components/ui/loader'
+    import Loader from 'components/ui/loader';
 
     export default {
         name: 'application-loading',
         components: {
             Loader
         }
-    }
+    };
 </script>
 <style lang="scss" scoped>
     .application-loading {
