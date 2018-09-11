@@ -40,10 +40,9 @@ setenforce 0
 sed -i "s/^#listen_addresses.*=.*$/listen_addresses = '*'/" /var/lib/pgsql/10/data/postgresql.conf
 
 #copy configs
-\cp /home/vagrant/htdocs/vagrant/postgresql/* /var/lib/pgsql/10/data
-\cp /home/vagrant/htdocs/vagrant/php-fpm/* /etc/php-fpm.d
-\cp /home/vagrant/htdocs/vagrant/nginx/conf.d/* /etc/nginx/conf.d
-\cp /home/vagrant/htdocs/nginx.conf /etc/nginx
+\cp /var/www/vagrant/postgresql/* /var/lib/pgsql/10/data
+\cp /var/www/vagrant/php-fpm/* /etc/php-fpm.d
+\cp  -r /var/www/vagrant/nginx/* /etc/nginx/
 
 #start services
 systemctl start php-fpm
