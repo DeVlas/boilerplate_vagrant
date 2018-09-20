@@ -1,0 +1,662 @@
+2018-09-14 07:08:05 [-][-][-][error][ReflectionException] ReflectionException: Class yii\gii\Module does not exist in /var/www/backend-application/vendor/yiisoft/yii2/di/Container.php:428
+Stack trace:
+#0 /var/www/backend-application/vendor/yiisoft/yii2/di/Container.php(428): ReflectionClass->__construct('yii\\gii\\Module')
+#1 /var/www/backend-application/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->getDependencies('yii\\gii\\Module')
+#2 /var/www/backend-application/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\gii\\Module', Array, Array)
+#3 /var/www/backend-application/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\gii\\Module', Array, Array)
+#4 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#5 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('gii')
+#6 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(273): yii\base\Application->bootstrap()
+#7 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(124): yii\base\Application->init()
+#8 /var/www/backend-application/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\console\Application->init()
+#9 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#10 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(89): yii\base\Application->__construct(Array)
+#11 /var/www/backend-application/yii(23): yii\console\Application->__construct(Array)
+#12 {main}
+2018-09-14 07:08:05 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '4'
+    'HOSTNAME' => 'drug.vm'
+    'TERM' => 'cygwin'
+    'SHELL' => '/bin/bash'
+    'HISTSIZE' => '1000'
+    'SSH_CLIENT' => '10.0.2.2 51296 22'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'MAIL' => '/var/spool/mail/vagrant'
+    'PATH' => '/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/vagrant/.local/bin:/home/vagrant/bin'
+    'PWD' => '/var/www/backend-application'
+    'LANG' => 'en_US.UTF-8'
+    'HISTCONTROL' => 'ignoredups'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LOGNAME' => 'vagrant'
+    'SSH_CONNECTION' => '10.0.2.2 51296 10.0.2.15 22'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'OLDPWD' => '/home/vagrant'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1536908885.9054
+    'REQUEST_TIME' => 1536908885
+    'argv' => [
+        0 => 'yii'
+    ]
+    'argc' => 1
+    'env' => 'development'
+    'app_name' => 'drug'
+]
+2018-09-14 07:10:19 [-][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\commands\HelloController' in file: /var/www/backend-application/console/commands/HelloController.php. Namespace missing? in /var/www/backend-application/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\commands\\He...')
+#1 [internal function]: spl_autoload_call('app\\commands\\He...')
+#2 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(280): class_exists('app\\commands\\He...')
+#3 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(258): yii\console\controllers\HelpController->validateControllerClass('app\\commands\\He...')
+#4 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(175): yii\console\controllers\HelpController->getModuleCommands(Object(yii\console\Application))
+#5 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(187): yii\console\controllers\HelpController->getCommands()
+#6 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(293): yii\console\controllers\HelpController->getCommandDescriptions()
+#7 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(67): yii\console\controllers\HelpController->getDefaultHelp()
+#8 [internal function]: yii\console\controllers\HelpController->actionIndex(NULL)
+#9 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#12 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#13 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('', Array)
+#14 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('', Array)
+#15 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#16 /var/www/backend-application/yii(24): yii\base\Application->run()
+#17 {main}
+2018-09-14 07:10:18 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '4'
+    'HOSTNAME' => 'drug.vm'
+    'TERM' => 'cygwin'
+    'SHELL' => '/bin/bash'
+    'HISTSIZE' => '1000'
+    'SSH_CLIENT' => '10.0.2.2 51296 22'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'MAIL' => '/var/spool/mail/vagrant'
+    'PATH' => '/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/vagrant/.local/bin:/home/vagrant/bin'
+    'PWD' => '/var/www/backend-application'
+    'LANG' => 'en_US.UTF-8'
+    'HISTCONTROL' => 'ignoredups'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LOGNAME' => 'vagrant'
+    'SSH_CONNECTION' => '10.0.2.2 51296 10.0.2.15 22'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'OLDPWD' => '/home/vagrant'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1536909018.958
+    'REQUEST_TIME' => 1536909018
+    'argv' => [
+        0 => 'yii'
+    ]
+    'argc' => 1
+    'env' => 'development'
+    'app_name' => 'drug'
+]
+2018-09-17 20:11:49 [-][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\commands\HelloController' in file: /var/www/backend-application/console/commands/HelloController.php. Namespace missing? in /var/www/backend-application/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\commands\\He...')
+#1 [internal function]: spl_autoload_call('app\\commands\\He...')
+#2 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(280): class_exists('app\\commands\\He...')
+#3 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(258): yii\console\controllers\HelpController->validateControllerClass('app\\commands\\He...')
+#4 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(175): yii\console\controllers\HelpController->getModuleCommands(Object(yii\console\Application))
+#5 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(187): yii\console\controllers\HelpController->getCommands()
+#6 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(293): yii\console\controllers\HelpController->getCommandDescriptions()
+#7 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(67): yii\console\controllers\HelpController->getDefaultHelp()
+#8 [internal function]: yii\console\controllers\HelpController->actionIndex(NULL)
+#9 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#12 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#13 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('', Array)
+#14 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('', Array)
+#15 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#16 /var/www/backend-application/yii(24): yii\base\Application->run()
+#17 {main}
+2018-09-17 20:11:49 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'drug.vm'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'cygwin'
+    'HISTSIZE' => '1000'
+    'USER' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'SUDO_USER' => 'vagrant'
+    'SUDO_UID' => '1000'
+    'USERNAME' => 'root'
+    'MC_TMPDIR' => '/tmp/mc-root'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'MAIL' => '/var/spool/mail/vagrant'
+    'PWD' => '/var/www/backend-application'
+    'LANG' => 'en_US.UTF-8'
+    'HISTCONTROL' => 'ignorespace'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/mc'
+    'HOME' => '/root'
+    'MC_SID' => '2986'
+    'LOGNAME' => 'root'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'SUDO_GID' => '1000'
+    'OLDPWD' => '/var/www'
+    '_' => '/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1537215109.4163
+    'REQUEST_TIME' => 1537215109
+    'argv' => [
+        0 => 'yii'
+    ]
+    'argc' => 1
+    'env' => 'development'
+    'app_name' => 'drug'
+]
+2018-09-17 20:18:25 [-][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\commands\HelloController' in file: /var/www/backend-application/console/commands/HelloController.php. Namespace missing? in /var/www/backend-application/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\commands\\He...')
+#1 [internal function]: spl_autoload_call('app\\commands\\He...')
+#2 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(280): class_exists('app\\commands\\He...')
+#3 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(258): yii\console\controllers\HelpController->validateControllerClass('app\\commands\\He...')
+#4 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(175): yii\console\controllers\HelpController->getModuleCommands(Object(yii\console\Application))
+#5 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(187): yii\console\controllers\HelpController->getCommands()
+#6 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(293): yii\console\controllers\HelpController->getCommandDescriptions()
+#7 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(67): yii\console\controllers\HelpController->getDefaultHelp()
+#8 [internal function]: yii\console\controllers\HelpController->actionIndex(NULL)
+#9 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#12 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#13 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('', Array)
+#14 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('', Array)
+#15 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#16 /var/www/backend-application/yii(24): yii\base\Application->run()
+#17 {main}
+2018-09-17 20:18:25 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'drug.vm'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'cygwin'
+    'HISTSIZE' => '1000'
+    'USER' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'SUDO_USER' => 'vagrant'
+    'SUDO_UID' => '1000'
+    'USERNAME' => 'root'
+    'MC_TMPDIR' => '/tmp/mc-root'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'MAIL' => '/var/spool/mail/vagrant'
+    'PWD' => '/var/www/backend-application'
+    'LANG' => 'en_US.UTF-8'
+    'HISTCONTROL' => 'ignorespace'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/mc'
+    'HOME' => '/root'
+    'MC_SID' => '2986'
+    'LOGNAME' => 'root'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'SUDO_GID' => '1000'
+    'OLDPWD' => '/var/www'
+    '_' => '/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1537215505.0282
+    'REQUEST_TIME' => 1537215505
+    'argv' => [
+        0 => 'yii'
+    ]
+    'argc' => 1
+    'env' => 'development'
+    'app_name' => 'drug'
+]
+2018-09-17 20:24:35 [-][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Invalid path alias: @console/commands in /var/www/backend-application/vendor/yiisoft/yii2/BaseYii.php:154
+Stack trace:
+#0 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(257): yii\BaseYii::getAlias('@console/comman...')
+#1 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(246): yii\base\Module->getControllerPath()
+#2 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(175): yii\console\controllers\HelpController->getModuleCommands(Object(yii\console\Application))
+#3 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(187): yii\console\controllers\HelpController->getCommands()
+#4 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(293): yii\console\controllers\HelpController->getCommandDescriptions()
+#5 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(67): yii\console\controllers\HelpController->getDefaultHelp()
+#6 [internal function]: yii\console\controllers\HelpController->actionIndex(NULL)
+#7 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#11 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('', Array)
+#12 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('', Array)
+#13 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 /var/www/backend-application/yii(17): yii\base\Application->run()
+#15 {main}
+2018-09-17 20:24:35 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'drug.vm'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'cygwin'
+    'HISTSIZE' => '1000'
+    'USER' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'SUDO_USER' => 'vagrant'
+    'SUDO_UID' => '1000'
+    'USERNAME' => 'root'
+    'MC_TMPDIR' => '/tmp/mc-root'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'MAIL' => '/var/spool/mail/vagrant'
+    'PWD' => '/var/www/backend-application'
+    'LANG' => 'en_US.UTF-8'
+    'HISTCONTROL' => 'ignorespace'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/mc'
+    'HOME' => '/root'
+    'MC_SID' => '2986'
+    'LOGNAME' => 'root'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'SUDO_GID' => '1000'
+    'OLDPWD' => '/var/www'
+    '_' => '/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1537215875.257
+    'REQUEST_TIME' => 1537215875
+    'argv' => [
+        0 => 'yii'
+    ]
+    'argc' => 1
+    'env' => 'development'
+    'app_name' => 'drug'
+]
+2018-09-17 20:25:06 [-][-][-][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Invalid path alias: @console/commands in /var/www/backend-application/vendor/yiisoft/yii2/BaseYii.php:154
+Stack trace:
+#0 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(257): yii\BaseYii::getAlias('@console/comman...')
+#1 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(246): yii\base\Module->getControllerPath()
+#2 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(175): yii\console\controllers\HelpController->getModuleCommands(Object(yii\console\Application))
+#3 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(187): yii\console\controllers\HelpController->getCommands()
+#4 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(293): yii\console\controllers\HelpController->getCommandDescriptions()
+#5 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/HelpController.php(67): yii\console\controllers\HelpController->getDefaultHelp()
+#6 [internal function]: yii\console\controllers\HelpController->actionIndex(NULL)
+#7 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('', Array)
+#10 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#11 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('', Array)
+#12 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('', Array)
+#13 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#14 /var/www/backend-application/yii(17): yii\base\Application->run()
+#15 {main}
+2018-09-17 20:25:06 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'drug.vm'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'cygwin'
+    'HISTSIZE' => '1000'
+    'USER' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'SUDO_USER' => 'vagrant'
+    'SUDO_UID' => '1000'
+    'USERNAME' => 'root'
+    'MC_TMPDIR' => '/tmp/mc-root'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'MAIL' => '/var/spool/mail/vagrant'
+    'PWD' => '/var/www/backend-application'
+    'LANG' => 'en_US.UTF-8'
+    'HISTCONTROL' => 'ignorespace'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/mc'
+    'HOME' => '/root'
+    'MC_SID' => '2986'
+    'LOGNAME' => 'root'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'SUDO_GID' => '1000'
+    'OLDPWD' => '/var/www'
+    '_' => '/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1537215906.2697
+    'REQUEST_TIME' => 1537215906
+    'argv' => [
+        0 => 'yii'
+    ]
+    'argc' => 1
+    'env' => 'development'
+    'app_name' => 'drug'
+]
+2018-09-17 20:30:29 [-][-][-][error][yii\base\InvalidConfigException] ReflectionException: Class db does not exist in /var/www/backend-application/vendor/yiisoft/yii2/di/Container.php:428
+Stack trace:
+#0 /var/www/backend-application/vendor/yiisoft/yii2/di/Container.php(428): ReflectionClass->__construct('db')
+#1 /var/www/backend-application/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->getDependencies('db')
+#2 /var/www/backend-application/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('db', Array, Array)
+#3 /var/www/backend-application/vendor/yiisoft/yii2/di/Instance.php(167): yii\di\Container->get('db')
+#4 /var/www/backend-application/vendor/yiisoft/yii2/di/Instance.php(137): yii\di\Instance->get(NULL)
+#5 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(182): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#6 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(155): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('create', Array)
+#8 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#9 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#10 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#11 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#12 /var/www/backend-application/yii(17): yii\base\Application->run()
+#13 {main}
+
+Next yii\base\InvalidConfigException: Failed to instantiate component or class "db". in /var/www/backend-application/vendor/yiisoft/yii2/di/Instance.php:139
+Stack trace:
+#0 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(182): yii\di\Instance::ensure(Object(yii\di\Instance), 'yii\\db\\Connecti...')
+#1 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(155): yii\console\controllers\MigrateController->beforeAction(Object(yii\base\InlineAction))
+#2 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('create', Array)
+#3 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#4 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#5 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#6 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /var/www/backend-application/yii(17): yii\base\Application->run()
+#8 {main}
+2018-09-17 20:30:29 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'drug.vm'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'cygwin'
+    'HISTSIZE' => '1000'
+    'USER' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'SUDO_USER' => 'vagrant'
+    'SUDO_UID' => '1000'
+    'USERNAME' => 'root'
+    'MC_TMPDIR' => '/tmp/mc-root'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'MAIL' => '/var/spool/mail/vagrant'
+    'PWD' => '/var/www/backend-application'
+    'LANG' => 'en_US.UTF-8'
+    'HISTCONTROL' => 'ignorespace'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/mc'
+    'HOME' => '/root'
+    'MC_SID' => '2986'
+    'LOGNAME' => 'root'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'SUDO_GID' => '1000'
+    'OLDPWD' => '/var/www'
+    '_' => '/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1537216229.7289
+    'REQUEST_TIME' => 1537216229
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'create_users_table'
+    ]
+    'argc' => 3
+    'env' => 'development'
+    'app_name' => 'drug'
+]
+2018-09-17 21:15:36 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[08006] [7] FATAL:  role "druguser" does not exist in /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('pgsql:host=loca...', 'druguser', 'druguser123', NULL)
+#1 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(463): yii\db\Connection->getSlavePdo()
+#5 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(881): yii\db\Schema->quoteValue('migration')
+#6 /var/www/backend-application/vendor/yiisoft/yii2/db/pgsql/Schema.php(464): yii\db\Connection->quoteValue('migration')
+#7 /var/www/backend-application/vendor/yiisoft/yii2/db/pgsql/Schema.php(192): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#10 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(340): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(631): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('create_users_ta...')
+#13 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('create', Array)
+#16 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#17 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#18 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#19 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /var/www/backend-application/yii(21): yii\base\Application->run()
+#21 {main}
+
+Next yii\db\Exception: SQLSTATE[08006] [7] FATAL:  role "druguser" does not exist in /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(463): yii\db\Connection->getSlavePdo()
+#3 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(881): yii\db\Schema->quoteValue('migration')
+#4 /var/www/backend-application/vendor/yiisoft/yii2/db/pgsql/Schema.php(464): yii\db\Connection->quoteValue('migration')
+#5 /var/www/backend-application/vendor/yiisoft/yii2/db/pgsql/Schema.php(192): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#8 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(340): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(631): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('create_users_ta...')
+#11 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('create', Array)
+#14 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#15 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#16 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#17 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /var/www/backend-application/yii(21): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2018-09-17 21:15:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'drug.vm'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'cygwin'
+    'HISTSIZE' => '1000'
+    'USER' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'SUDO_USER' => 'vagrant'
+    'SUDO_UID' => '1000'
+    'USERNAME' => 'root'
+    'MC_TMPDIR' => '/tmp/mc-root'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'MAIL' => '/var/spool/mail/vagrant'
+    'PWD' => '/var/www/backend-application'
+    'LANG' => 'en_US.UTF-8'
+    'HISTCONTROL' => 'ignorespace'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/mc'
+    'HOME' => '/root'
+    'MC_SID' => '2986'
+    'LOGNAME' => 'root'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'SUDO_GID' => '1000'
+    'OLDPWD' => '/var/www'
+    '_' => '/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1537218936.8474
+    'REQUEST_TIME' => 1537218936
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'create_users_table'
+    ]
+    'argc' => 3
+    'env' => 'development'
+    'app_name' => 'drug'
+]
+2018-09-17 21:15:36 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[08006] [7] FATAL:  role "druguser" does not exist in /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('pgsql:host=loca...', 'druguser', 'druguser123', NULL)
+#1 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(463): yii\db\Connection->getSlavePdo()
+#5 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(881): yii\db\Schema->quoteValue('migration')
+#6 /var/www/backend-application/vendor/yiisoft/yii2/db/pgsql/Schema.php(464): yii\db\Connection->quoteValue('migration')
+#7 /var/www/backend-application/vendor/yiisoft/yii2/db/pgsql/Schema.php(192): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#8 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\pgsql\Schema->loadTableSchema('migration')
+#9 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#10 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(340): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(631): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('create_users_ta...')
+#13 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('create', Array)
+#16 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#17 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#18 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#19 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /var/www/backend-application/yii(21): yii\base\Application->run()
+#21 {main}
+
+Next yii\db\Exception: SQLSTATE[08006] [7] FATAL:  role "druguser" does not exist in /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(463): yii\db\Connection->getSlavePdo()
+#3 /var/www/backend-application/vendor/yiisoft/yii2/db/Connection.php(881): yii\db\Schema->quoteValue('migration')
+#4 /var/www/backend-application/vendor/yiisoft/yii2/db/pgsql/Schema.php(464): yii\db\Connection->quoteValue('migration')
+#5 /var/www/backend-application/vendor/yiisoft/yii2/db/pgsql/Schema.php(192): yii\db\pgsql\Schema->findColumns(Object(yii\db\TableSchema))
+#6 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\pgsql\Schema->loadTableSchema('migration')
+#7 /var/www/backend-application/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#8 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/MigrateController.php(340): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /var/www/backend-application/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(631): yii\console\controllers\MigrateController->getMigrationNameLimit()
+#10 [internal function]: yii\console\controllers\BaseMigrateController->actionCreate('create_users_ta...')
+#11 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /var/www/backend-application/vendor/yiisoft/yii2/console/Controller.php(148): yii\base\Controller->runAction('create', Array)
+#14 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#15 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#16 /var/www/backend-application/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#17 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#18 /var/www/backend-application/yii(21): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2018-09-17 21:15:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HOSTNAME' => 'drug.vm'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'cygwin'
+    'HISTSIZE' => '1000'
+    'USER' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:'
+    'SUDO_USER' => 'vagrant'
+    'SUDO_UID' => '1000'
+    'USERNAME' => 'root'
+    'MC_TMPDIR' => '/tmp/mc-root'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'MAIL' => '/var/spool/mail/vagrant'
+    'PWD' => '/var/www/backend-application'
+    'LANG' => 'en_US.UTF-8'
+    'HISTCONTROL' => 'ignorespace'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/mc'
+    'HOME' => '/root'
+    'MC_SID' => '2986'
+    'LOGNAME' => 'root'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'SUDO_GID' => '1000'
+    'OLDPWD' => '/var/www'
+    '_' => '/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1537218936.8474
+    'REQUEST_TIME' => 1537218936
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate/create'
+        2 => 'create_users_table'
+    ]
+    'argc' => 3
+    'env' => 'development'
+    'app_name' => 'drug'
+]

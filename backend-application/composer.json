@@ -1,0 +1,30 @@
+{
+  "name": "drug",
+  "description": "drug",
+  "keywords": [
+    "drug"
+  ],
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "require": {
+    "php": ">=7.2.0",
+    "yiisoft/yii2": "~2.0.14",
+    "yiisoft/yii2-bootstrap": "~2.0.0",
+    "yiisoft/yii2-swiftmailer": "~2.0.0",
+    "vlucas/phpdotenv": "^2.5"
+  },
+  "config": {
+    "process-timeout": 1800,
+    "fxp-asset": {
+      "installer-paths": {
+        "npm-asset-library": "vendor/npm",
+        "bower-asset-library": "vendor/bower"
+      }
+    }
+  },
+  "scripts": {
+  },
+  "require-dev": {
+    "mis/yii2-ide-helper": "^1.0"
+  }
+}
