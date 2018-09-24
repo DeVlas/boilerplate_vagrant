@@ -1,11 +1,12 @@
 <?php
 
 $config = [
+    'id' => 'console',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'console/commands',
+    'controllerNamespace' => 'console\commands',
     'aliases' => [
-        '@console' => dirname(__DIR__ . '..' . DIRECTORY_SEPARATOR . 'console'),
-        '@tests' => '@console/tests',
+        '@console' => dirname(__DIR__ .  DIRECTORY_SEPARATOR . 'console', 2),
+         '@tests' => 'console/tests',
     ],
     'components' => [
         'log' => [
@@ -17,13 +18,6 @@ $config = [
             ],
         ],
     ],
-    /*
-    'controllerMap' => [
-        'fixture' => [ // Fixture generation command line.
-            'class' => 'yii\faker\FixtureController',
-        ],
-    ],
-    */
 ];
 
 return $config;

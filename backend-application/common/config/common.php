@@ -1,22 +1,14 @@
 <?php
 
-$params = require __DIR__ . '/params.php';
-
-// Schema cache options (for production environment)
-$dbOptions = [];
-if (getenv('env') === 'production') {
-    $dbOptions = [
-        'enableSchemaCache' => true,
-        'schemaCacheDuration' => 60,
-        'schemaCache' => 'cache',
-    ];
-}
+$params = require __DIR__ . DIRECTORY_SEPARATOR .'params.php';
+$db =  require __DIR__ . DIRECTORY_SEPARATOR . 'db.php';
 
 $config = [
     'id' => getenv('app_name'),
     'bootstrap' => ['log'],
     'aliases' => [
         '@models' =>  dirname(__DIR__ . '..' . DIRECTORY_SEPARATOR . 'models'),
+        '@logs' => dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . '/logs',
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
     ],
@@ -38,34 +30,15 @@ $config = [
             'useFileTransport' => true,
         ],
         'log' => [
-            'traceLevel' => YII_DEBUG ? 3 : 0,
-            'targets' => [
-                [
-                    'class' => 'yii\log\FileTarget',
-                    'levels' => ['error', 'warning'],
-                ],
-            ],
+            'traceLevel' => getenv('log_level'),
+            'flushInterval' => 100,
         ],
-        'db' => array_merge([
-            'class' => 'yii\db\Connection',
-            'dsn' => 'pgsql:host=localhost;port=5432;dbname=drug',
-            'username' => 'druguser',
-            'password' => 'druguser123',
-            'charset' => 'utf8',
-        ], $dbOptions),
-        /*
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        */
+        'db' => $db
     ],
     'params' => $params,
 ];
 
-if (YII_ENV_DEV) {
+if (YII_ENV === 'development') {
     // configuration adjustments for 'dev' environment
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
