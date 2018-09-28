@@ -15,3 +15,4 @@ $config = require dirname(__DIR__) . '/config/web.php';
     require dirname(__DIR__, 2) . '/common/config/common.php',
     require dirname(__DIR__) . '/config/web.php'
 )))->run();
+

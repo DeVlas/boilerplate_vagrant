@@ -3,6 +3,9 @@
 $routes = require __DIR__ . '/routes.php';
 $config = [
     'id' => 'user',
+    'language' => 'en',
+    'timeZone' => 'Europe/Moscow',
+    'layout' => false,
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'user\controllers',
     'bootstrap' => [],
@@ -48,6 +51,8 @@ $config = [
 
     ],
     'params' => [],
+    'on afterRequest' => function ($event) {
+    }
 ];
 
 return $config;
