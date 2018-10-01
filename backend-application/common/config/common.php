@@ -6,21 +6,18 @@ $db =  require __DIR__ . DIRECTORY_SEPARATOR . 'db.php';
 $config = [
     'id' => getenv('app_name'),
     'bootstrap' => ['log'],
-    'aliases' => [
-        '@models' =>  dirname(__DIR__ . '..' . DIRECTORY_SEPARATOR . 'models'),
-        '@logs' => dirname(__DIR__, 2) . DIRECTORY_SEPARATOR . '/logs',
-        '@bower' => '@vendor/bower-asset',
-        '@npm' => '@vendor/npm-asset',
-    ],
     'components' => [
+        'i18n' => [
+            'translations' => [
+                'basePath' => '@i18n'
+            ]
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+
         'user' => [
             'class' => \common\models\User::class,
-        ],
-        'errorHandler' => [
-
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -32,6 +29,16 @@ $config = [
         'log' => [
             'traceLevel' => getenv('log_level'),
             'flushInterval' => 100,
+            'targets' => [
+                [
+                    'class' => 'yii\log\FileTarget',
+                    'logFile' => '@logs/error.log',
+                    'categories' => ['error'],
+                    'enableRotation' => true,
+                    'levels' => ['error'],
+                    'logVars' => [], //_SERVER, _POST, __FILES, __COOKIES
+                ],
+            ]
         ],
         'db' => $db
     ],

@@ -6,7 +6,7 @@ $config = [
     'controllerNamespace' => 'console\commands',
     'aliases' => [
         '@console' => dirname(__DIR__ .  DIRECTORY_SEPARATOR . 'console', 2),
-         '@tests' => 'console/tests',
+        '@tests' => 'console/tests',
     ],
     'components' => [
         'log' => [

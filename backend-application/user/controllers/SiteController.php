@@ -2,8 +2,8 @@
 
 namespace user\controllers;
 
-use yii\web\Controller;
-use Yii;
+use common\components\Controller;
+
 
 class SiteController extends Controller
 {
@@ -11,11 +11,13 @@ class SiteController extends Controller
      * Displays homepage.
      *
      * @return string
+     * @throws \Exception
      */
     public function actionIndex()
     {
-
-        return $this->asJson(['hui' => 'pizda']);
+        echo $zxcvb;
+        //throw new \Exception('wqewqeqweqw');
+        return $this->response(['hui' => 'pizda']);
 
     }
 }
