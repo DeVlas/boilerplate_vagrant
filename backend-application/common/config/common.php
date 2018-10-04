@@ -1,7 +1,7 @@
 <?php
 
-$params = require __DIR__ . DIRECTORY_SEPARATOR .'params.php';
-$db =  require __DIR__ . DIRECTORY_SEPARATOR . 'db.php';
+$params = require __DIR__ . DIRECTORY_SEPARATOR . 'params.php';
+$db = require __DIR__ . DIRECTORY_SEPARATOR . 'db.php';
 
 $config = [
     'id' => getenv('app_name'),
@@ -9,8 +9,11 @@ $config = [
     'components' => [
         'i18n' => [
             'translations' => [
-                'basePath' => '@i18n'
-            ]
+                '*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@common/i18n',
+                ],
+            ],
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -38,9 +41,9 @@ $config = [
                     'levels' => ['error'],
                     'logVars' => [], //_SERVER, _POST, __FILES, __COOKIES
                 ],
-            ]
+            ],
         ],
-        'db' => $db
+        'db' => $db,
     ],
     'params' => $params,
 ];

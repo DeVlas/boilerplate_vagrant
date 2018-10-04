@@ -3,7 +3,7 @@
 namespace user\controllers;
 
 use common\components\Controller;
-
+use Yii;
 
 class SiteController extends Controller
 {
@@ -15,9 +15,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        echo $zxcvb;
-        //throw new \Exception('wqewqeqweqw');
-        return $this->response(['hui' => 'pizda']);
+        try {
 
+            return $this->response(['something' => Yii::t('common', 'test')]);
+        } catch (\Throwable $e) {
+            // Throwable base class of Exception;
+        }
     }
 }

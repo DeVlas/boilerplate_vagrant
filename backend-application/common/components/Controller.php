@@ -1,24 +1,23 @@
 <?php
+
 namespace common\components;
 
-use yii\helpers\Json;
+
 use yii\web\Controller as BaseController;
-use Yii;
+use common\services\Response;
 
-class Controller extends BaseController {
-    private $format = \yii\web\Response::FORMAT_JSON;
+/*
+ * Base controller
+ */
 
-    public function setFormat($format) {
-        $this->format = $format;
-    }
-
-    public function getFormat() {
-        return $this->format;
-    }
-
-    public function response($data) {
-        $response = Yii::$app->response;
-        $response->format = $this->getFormat();
-        $response->data = Json::encode($data);
+class Controller extends BaseController
+{
+    /**
+     * Send response to user
+     * @param $data
+     */
+    public function response($data)
+    {
+        Response::send($data);
     }
 }

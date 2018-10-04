@@ -1,5 +1,7 @@
 <?php
 
+use common\services\Internationalization;
+
 $routes = require __DIR__ . '/routes.php';
 $config = [
     'id' => 'user',
@@ -49,23 +51,10 @@ $config = [
 
     ],
     'params' => [
-        'acceptableLanguages' => [
-            'ru',
-            'en',
-        ]
+
     ],
     'on beforeRequest' => function ($event) {
-    // перенеси всю локгику в сервис по языкам
-        var_dump(Yii::$app->request->headers['x-language']);die;
-        if ()
-        foreach (Yii::$app->request->getAcceptableLanguages() as $language) {
-            if (in_array(Yii::$app->params['acceptableLanguages'], $language)) {
-                Yii::$app->language =$language;
-                break;
-            }
-        }
-        var_dump(Yii::$app->request->getAcceptableLanguages());die;
-
+        Internationalization::setLanguage();
     },
 ];
 
