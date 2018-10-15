@@ -7,9 +7,22 @@ use Yii;
 
 class SiteController extends Controller
 {
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+        $behaviors['access']['rules'] = [
+            [
+                'allow' => true,
+                'actions' => ['index'],
+                'roles' => ['admin'],
+            ],
+        ];
+
+        return $behaviors;
+    }
+
     /**
      * Displays homepage.
-     *
      * @return string
      * @throws \Exception
      */

@@ -7,20 +7,36 @@ $config = [
     'id' => getenv('app_name'),
     'bootstrap' => ['log'],
     'components' => [
+        'redis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => getenv('redishost'),
+            'port' => getenv('redisport'),
+            'database' => getenv('redisdatabase'),
+        ],
         'i18n' => [
             'translations' => [
                 '*' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
+                    'class' => common\components\MessageSource::class,
                     'basePath' => '@common/i18n',
                 ],
             ],
         ],
         'cache' => [
-            'class' => 'yii\caching\FileCache',
+            'class' => \yii\caching\MemCache::class,
+            'useMemcached' => true,
+            'servers' => [
+                [
+                    'host' => getenv('memcachehost'),
+                    'port' => getenv('memcacheport'),
+                    'weight' => 0
+                ],
+            ],
         ],
-
         'user' => [
-            'class' => \common\models\User::class,
+            'identityClass' => \common\models\User::class,
+            'class' => \common\components\User::class,
+            'enableSession' => false,
+            'loginUrl' => null,
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',

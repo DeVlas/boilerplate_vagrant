@@ -11,11 +11,11 @@ if (getenv('env') === 'production') {
 return array_merge([
     'class' => 'yii\db\Connection',
     'dsn' => sprintf('pgsql:host=%s;port=%s;dbname=%s',
-        getenv('host'),
-        getenv('port'),
+        getenv('dbhost'),
+        getenv('dbport'),
         getenv('dbname')
     ),
-    'username' => getenv('username'),
-    'password' => getenv('password'),
+    'username' => getenv('dbusername'),
+    'password' => getenv('dbpassword'),
     'charset' => 'utf8',
 ], $dbOptions);
