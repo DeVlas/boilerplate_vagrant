@@ -3,6 +3,7 @@
 namespace user\controllers;
 
 use common\components\Controller;
+use common\emails\Promote;
 use Yii;
 
 class SiteController extends Controller
@@ -14,7 +15,7 @@ class SiteController extends Controller
             [
                 'allow' => true,
                 'actions' => ['index'],
-                'roles' => ['admin'],
+                'roles' => [],
             ],
         ];
 
@@ -28,11 +29,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        try {
 
-            return $this->response(['something' => Yii::t('common', 'test')]);
-        } catch (\Throwable $e) {
-            // Throwable base class of Exception;
-        }
+        $email = new Promote();
+        $email->setData(['data' => 'dasdasd', 'da' => 'no'])->send();
+
+        return $this->response(['something' => Yii::t('common', 'test')]);
+
     }
 }

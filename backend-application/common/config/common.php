@@ -44,6 +44,9 @@ $config = [
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
             'useFileTransport' => true,
+            'htmlLayout' => '@email/layouts/html/html',
+            'textLayout' => '@email/layouts/text/text',
+            'viewPath' => '@email/views'
         ],
         'log' => [
             'traceLevel' => getenv('log_level'),

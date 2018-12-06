@@ -11,7 +11,7 @@ class AccessRule extends BaseAccessRule
     {
 
         if (empty($this->roles)) {
-            return false;
+            return true;
         }
 
         if ($user->getIsGuest() && in_array('?', $this->roles)) {
