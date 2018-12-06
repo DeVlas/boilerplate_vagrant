@@ -1,0 +1,35 @@
+2018-12-06 11:47:58 [10.0.2.2][-][-][error][error] yii\base\ErrorException: Class 'common\components\Email' not found in /var/www/backend-application/common/emails/Promote.php:8
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+    in /var/www/backend-application/common/components/ErrorHandler.php:16
+2018-12-06 11:49:41 [10.0.2.2][-][-][error][error] yii\base\ErrorException: array_merge(): Argument #1 is not an array in /var/www/backend-application/common/emails/Base.php:31
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'array_merge(): ...', '/var/www/backen...', 31, Array)
+#1 /var/www/backend-application/common/emails/Base.php(31): array_merge(NULL, Array)
+#2 /var/www/backend-application/common/emails/Base.php(23): common\emails\Base->setData(Array)
+#3 /var/www/backend-application/user/controllers/SiteController.php(33): common\emails\Base->__construct(Array)
+#4 [internal function]: user\controllers\SiteController->actionIndex()
+#5 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 /var/www/backend-application/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/index', Array)
+#9 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/backend-application/user/public/index.php(18): yii\base\Application->run()
+#11 {main}
+    in /var/www/backend-application/common/components/ErrorHandler.php:16
+2018-12-06 11:51:07 [10.0.2.2][-][-][error][error] yii\base\ErrorException: array_merge(): Argument #1 is not an array in /var/www/backend-application/common/emails/Base.php:31
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'array_merge(): ...', '/var/www/backen...', 31, Array)
+#1 /var/www/backend-application/common/emails/Base.php(31): array_merge(NULL, Array)
+#2 /var/www/backend-application/common/emails/Base.php(23): common\emails\Base->setData(Array)
+#3 /var/www/backend-application/user/controllers/SiteController.php(33): common\emails\Base->__construct(Array)
+#4 [internal function]: user\controllers\SiteController->actionIndex()
+#5 /var/www/backend-application/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/backend-application/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/backend-application/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 /var/www/backend-application/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/index', Array)
+#9 /var/www/backend-application/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/backend-application/user/public/index.php(18): yii\base\Application->run()
+#11 {main}
+    in /var/www/backend-application/common/components/ErrorHandler.php:16
